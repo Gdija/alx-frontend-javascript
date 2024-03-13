@@ -5,16 +5,16 @@ interface Student {
   location: string;
 }
 const student1: Student = {
-  firstName: "Israa";
-  lastName: "IS";
-  age: 13;
-  location: "Colombia";
+  firstName: "Israa",
+  lastName: "IS",
+  age: 13,
+  location: "Colombia"
 }
-const student1: Student = {
-  firstName: "Yass";
-  lastName: "Gh";
-  age: 13;
-  location: "Mexico";
+const student2: Student = {
+  firstName: "Yass",
+  lastName: "Gh",
+  age: 13,
+  location: "Mexico"
 }
 const studentsList: Student[] = [student1, student2];
 
@@ -22,7 +22,7 @@ const table = document.createElement('table');
 const tbody = document.createElement('tbody');
 
 table.style.background = "yellow";
-tbody.appendChild(tbody);
+table.appendChild(tbody);
 
 studentsList.forEach((student: Student): void => {
   const row = document.createElement('tr');

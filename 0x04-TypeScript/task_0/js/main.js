@@ -4,7 +4,7 @@ var student1 = {
     age: 13,
     location: "Colombia"
 };
-var student1 = {
+var student2 = {
     firstName: "Yass",
     lastName: "Gh",
     age: 13,
@@ -14,7 +14,7 @@ var studentsList = [student1, student2];
 var table = document.createElement('table');
 var tbody = document.createElement('tbody');
 table.style.background = "yellow";
-tbody.appendChild(tbody);
+table.appendChild(tbody);
 studentsList.forEach(function (student) {
     var row = document.createElement('tr');
     var name = document.createElement('td');
