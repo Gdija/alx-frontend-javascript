@@ -42,10 +42,10 @@ export function createEmployee(salary: string | number): Director | Teacher{
 }
 
 // Creating functions specific to employees
-export function isDirector(employee: (Director | Teacher)) {
+function isDirector(employee: (Director | Teacher)) {
     return employee instanceof Director;
 }
-export function executeWork(employee: (Director | Teacher)){
+function executeWork(employee: (Director | Teacher)){
     if (employee instanceof Director){
          return employee.workDirectorTasks();
     }else{
@@ -54,3 +54,15 @@ export function executeWork(employee: (Director | Teacher)){
 }
 executeWork(createEmployee(200));
 executeWork(createEmployee(1000));
+// String literal types
+type Subjects= "Math" | "History";
+
+function teachClass(todayClass: Subjects): string{
+    if(todayClass === 'Math'){
+        return 'Teaching Math';
+    } else if(todayClass === 'History'){
+        return 'Teaching History';
+    }
+}
+console.log(teachClass("Math"));
+console.log(teachClass("History"));
