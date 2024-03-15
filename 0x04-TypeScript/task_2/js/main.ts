@@ -40,4 +40,17 @@ export function createEmployee(salary: string | number): Director | Teacher{
         return new Director();
     }
 }
-console.log(createEmployee(200));
+
+// Creating functions specific to employees
+export function isDirector(employee: (Director | Teacher)) {
+    return employee instanceof Director;
+}
+export function executeWork(employee: (Director | Teacher)){
+    if (employee instanceof Director){
+         return employee.workDirectorTasks();
+    }else{
+        return employee.workTeacherTasks();
+    }
+}
+executeWork(createEmployee(200));
+executeWork(createEmployee(1000));
